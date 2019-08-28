@@ -1,2 +1,2 @@
 # TicTacToe
-Trabalho de Algoritmos
+Trabalho de Algoritmos, deveria ser feito o jogo da velha na linguagem C.
