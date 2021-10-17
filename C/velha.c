@@ -141,7 +141,6 @@ void jogar(int jogador){
 }
 
 void main(){
-    //limparJogo();
     int start = aleatorizar();
     getPlayers();
 

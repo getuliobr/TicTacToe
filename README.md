@@ -1,2 +1,7 @@
 # TicTacToe
-Trabalho de Algoritmos, deveria ser feito o jogo da velha na linguagem C.
+Implementação do jogo da velha em várias linguagens de programação.
+
+## Status Atual
+| C | PYTHON | JAVASCRIPT |
+| --------------- | --------------- | --------------- |
+|  :heavy_check_mark:   | &nbsp;  | &nbsp;  |
