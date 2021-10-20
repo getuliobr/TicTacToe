@@ -2,9 +2,9 @@ from random import randint
 
 class Game:
   board = [
-    1, 2, 3,
+    7, 8, 9,
     4, 5, 6,
-    7, 8, 9
+    1, 2, 3
   ]
 
   player = [None, None]
@@ -52,6 +52,10 @@ class Game:
   def __pickStarterPlayer(self):
     self.starter = randint(0, 1)
 
+  def __treatPosition(self, pos):
+    posList = [7, 8, 9, 4, 5, 6, 1, 2, 3]
+    return posList[int(pos) - 1]
+
   def __start(self):
     print(f'O jogador {self.player[self.starter]} começa!')
 
@@ -59,10 +63,10 @@ class Game:
     while not winner and self.rounds != 9:
       self.__showGame()
       currPlayer = self.player[(self.rounds + self.starter) % 2]
-      pos = int(input(f'Jogador {currPlayer} marcar qual posicao? ')) - 1
+      pos = self.__treatPosition(input(f'Jogador {currPlayer} marcar qual posicao? ')) - 1
 
       while self.board[pos] in self.player:
-        pos = int(input(f'A posicao ja esta ocupada, jogador {currPlayer}, quer marcar qual posicao? '))
+        pos = self.__treatPosition(input(f'A posicao ja esta ocupada, jogador {currPlayer}, quer marcar qual posicao? ')) - 1
 
       self.board[pos] = currPlayer
 
